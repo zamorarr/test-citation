@@ -1,0 +1,48 @@
+---
+title: "Custom Citations"
+output: github_document
+bibliography: biblio.yaml
+csl: my-cool-style.csl
+link-citations: true
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+The purpose of this README is to demonstrate using a custom *csl* file and *yaml* bibliography to change the formatting of citations in RMarkdown documents.
+
+## Citation Style Language
+
+The file *my-cool-style.csl* contains a simple custom citation style that was generated using a [visual editor](http://editor.citationstyles.org/visualEditor).
+
+The custom style specifies that:
+
+- the citation should contain only the citation-number in superscript.
+- the bibligraphy entries are prefixed by a left bracket, suffixed by a right bracket, delimted by a forward slash.
+
+## YAML Bibliography
+
+Instead of using a common bibTex file to record bibliographic entries, this project uses a YAML file. The *biblio.yaml* file is machine and human readable and allows for custom field entries that are not typically allowed by bibTex. 
+
+## Example Usage
+
+This is an R Markdown document [@item1]. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents [@WatsonCrick1953]. For more details [@fenner2012a] on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+## References
